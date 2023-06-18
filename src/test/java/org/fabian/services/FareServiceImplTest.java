@@ -27,7 +27,7 @@ public class FareServiceImplTest {
     @Mock
     private FareDao fareDaoMock;
     @InjectMocks
-    private FareServiceImpl pruebaController;
+    private FareServiceImpl fareService;
 
 
     @BeforeEach
@@ -41,7 +41,7 @@ public class FareServiceImplTest {
         //Given
         when(fareDaoMock.findAllByBrandBrandIdAndProductProductIdAndStartDateLessThanEqualAndEndDateGreaterThanEqual(any(), any(), any(), any())).thenReturn(Collections.singletonList(new org.fabian.persistence.entities.Fare()));
         //When
-        final Fare result = pruebaController.getFare(getFilledFare());
+        final Fare result = fareService.getFare(getFilledFare());
         //Then
         assertThat(result, is(not(nullValue())));
         verify(fareDaoMock, atLeastOnce()).findAllByBrandBrandIdAndProductProductIdAndStartDateLessThanEqualAndEndDateGreaterThanEqual(any(), any(), any(), any());
@@ -53,7 +53,7 @@ public class FareServiceImplTest {
         //Given
         when(fareDaoMock.findAllByBrandBrandIdAndProductProductIdAndStartDateLessThanEqualAndEndDateGreaterThanEqual(any(), any(), any(), any())).thenReturn(Collections.EMPTY_LIST);
         //Then, When
-        assertThrows(IllegalArgumentException.class, () -> pruebaController.getFare(getFilledFare()));
+        assertThrows(IllegalArgumentException.class, () -> fareService.getFare(getFilledFare()));
     }
 
     private Fare getFilledFare() {

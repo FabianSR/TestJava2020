@@ -1,8 +1,6 @@
-package controller;
+package org.fabian.controller;
 
-import org.fabian.controller.FareController;
 import org.fabian.controller.mapper.FareDtoToFareDomainMapper;
-import org.fabian.domain.model.Fare;
 import org.fabian.services.FareService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -11,7 +9,8 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.atLeastOnce;
+import static org.mockito.Mockito.verify;
 
 public class FareControllerTest {
 
@@ -31,8 +30,6 @@ public class FareControllerTest {
     @Test
     public void getFare_shouldCallToService() {
         //Given
-        when(mapperMock.mapToFareDomain(any())).thenReturn(new Fare());
-        when(fareServiceMock.getFare(any())).thenReturn(new Fare());
         //When
         fareController.getFare(null);
         //Then

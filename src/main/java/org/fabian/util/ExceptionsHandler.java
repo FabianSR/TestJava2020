@@ -8,10 +8,12 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class ExceptionsHandler{
 
+    public static final String PRICE_NOT_FOUND = "PRICE NOT FOUND";
+
     @ExceptionHandler(RuntimeException.class)
     @ResponseStatus(value = HttpStatus.BAD_REQUEST)
     public String badRequest(final Exception exception) {
-        return "PRICE NOT FOUND";
+        return PRICE_NOT_FOUND;
     }
 
 }
