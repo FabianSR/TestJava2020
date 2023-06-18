@@ -16,6 +16,6 @@ import javax.persistence.Table;
 @Data
 public class Product {
     @Id
-    private String productId;
+    private Long productId;
     private String name;
 }

@@ -17,13 +17,13 @@ import java.time.LocalDateTime;
 public class Fare {
     @Id
     @JoinColumn(name = "price_list")
-    private String priceList;
+    private Integer priceList;
     @ManyToOne
     @JoinColumn(name = "product_id")
     private Product product;
     @ManyToOne
     @JoinColumn(name = "brand_id")
-    private Brand brandId;
+    private Brand brand;
     private String curr;
     private LocalDateTime startDate;
     private LocalDateTime endDate;

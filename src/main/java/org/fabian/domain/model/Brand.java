@@ -4,6 +4,6 @@ import lombok.Data;
 
 @Data
 public class Brand {
-    private String brandId;
+    private Integer brandId;
     private String name;
 }

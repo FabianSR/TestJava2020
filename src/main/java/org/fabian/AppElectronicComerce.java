@@ -13,5 +13,4 @@ public class AppElectronicComerce
     public static void main(final String[] args) {
         SpringApplication.run(AppElectronicComerce.class, args);
     }
-
 }

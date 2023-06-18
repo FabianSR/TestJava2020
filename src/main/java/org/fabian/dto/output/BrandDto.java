@@ -1,9 +1,9 @@
-package org.fabian.dto;
+package org.fabian.dto.output;
 
 import lombok.Data;
 
 @Data
 public class BrandDto {
-    private String brandId;
+    private Integer brandId;
     private String name;
 }

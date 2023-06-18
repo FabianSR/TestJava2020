@@ -7,11 +7,11 @@ import java.time.LocalDateTime;
 
 @Data
 public class Fare {
-    private String priceList;
+    private Integer priceList;
     private Product product;
     private Brand brand;
     private String curr;
-    private LocalDateTime startDate, endTime;
+    private LocalDateTime startDate, endDate;
     private Integer priority;
     private BigDecimal price;
 }

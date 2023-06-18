@@ -1,10 +1,9 @@
-package org.fabian.dto;
+package org.fabian.dto.output;
 
 import lombok.Data;
 
 @Data
 public class ProductDto {
-
-    private String productId;
+    private Long productId;
     private String name;
 }

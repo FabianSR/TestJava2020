@@ -18,6 +18,6 @@ import javax.persistence.Table;
 public class Brand {
     @Id
     @JoinColumn(name = "brand_id")
-    private String brandId;
+    private Integer brandId;
     private String name;
 }

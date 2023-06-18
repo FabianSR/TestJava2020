@@ -1,4 +1,4 @@
-package org.fabian.dto;
+package org.fabian.dto.output;
 
 import lombok.Data;
 
@@ -7,11 +7,11 @@ import java.time.LocalDateTime;
 
 @Data
 public class FareDto {
-    private String priceList;
+    private Integer priceList;
     private ProductDto product;
     private BrandDto brand;
     private String curr;
-    private LocalDateTime startDate, endTime;
+    private LocalDateTime startDate, endDate;
     private Integer priority;
     private BigDecimal price;
 }
