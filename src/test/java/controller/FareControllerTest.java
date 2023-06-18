@@ -31,8 +31,6 @@ public class FareControllerTest {
     @Test
     public void getFare_shouldCallToService() {
         //Given
-        when(mapperMock.mapToFareDomain(any())).thenReturn(new Fare());
-        when(fareServiceMock.getFare(any())).thenReturn(new Fare());
         //When
         fareController.getFare(null);
         //Then
