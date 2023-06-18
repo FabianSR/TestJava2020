@@ -1,9 +1,10 @@
-package org.fabian.domain.model;
+package org.fabian.dto;
 
 import lombok.Data;
 
 @Data
-public class Product {
+public class ProductDto {
+
     private String productId;
     private String name;
 }

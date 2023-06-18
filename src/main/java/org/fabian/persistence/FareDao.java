@@ -1,7 +1,7 @@
-package org.fabian.application.adapters.persistence;
+package org.fabian.persistence;
 
 
-import org.fabian.application.adapters.persistence.entities.Fare;
+import org.fabian.persistence.entities.Fare;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package org.fabian.application.adapters.persistence.entities;
+package org.fabian.persistence.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

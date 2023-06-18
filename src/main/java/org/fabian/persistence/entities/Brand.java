@@ -1,21 +1,23 @@
-package org.fabian.application.adapters.persistence.entities;
+package org.fabian.persistence.entities;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "product")
+@Table(name = "brand")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Product {
+public class Brand {
     @Id
-    private String productId;
+    @JoinColumn(name = "brand_id")
+    private String brandId;
     private String name;
 }

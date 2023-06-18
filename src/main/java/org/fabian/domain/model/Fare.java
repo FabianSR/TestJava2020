@@ -8,8 +8,8 @@ import java.time.LocalDateTime;
 @Data
 public class Fare {
     private String priceList;
-    private String productId;
-    private String brandId;
+    private Product product;
+    private Brand brand;
     private String curr;
     private LocalDateTime startDate, endTime;
     private Integer priority;
